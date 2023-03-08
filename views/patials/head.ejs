@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="https://kit.fontawesome.com/589ebc73ef.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"
+        integrity="sha512-XSL8md+KzAg/ysd1EBcvzQx+8keNkzJ1pogDe+bJN9P5/RW+5c5v5d6Am++F6fmnt8wpD22fCaC/MP1M48hRtg=="
+        crossorigin="anonymous"></script>
+    
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand btn btn-primary text-white" href="#">World Cup 2022</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <% if(isLogin===true) { %>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/nations">Nations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/players">Players</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/edit">
+                        Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/logout">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <% } %>
+            <% if(isLogin===false) { %>
+                <div class="navbar-end ml-auto">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="btn btn-primary" href="/users/login">
+                                <strong> <i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>Log
+                                    in</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+</nav>
